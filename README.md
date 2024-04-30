@@ -11,5 +11,4 @@ controlloEta (l'atleta deve essere maggiorenne per partecipare a match da 3 roun
 numeroRound (numero round del match in corrispondenza all'età dell'atleta)
 classeDiPeso (identifica il match in base al peso)
 atletiPresenti (nomi degli atleti e corrispettiva classe di peso presenti nel singolo match)
-atletaFavorito (per quanto riguarda le scommesse, il favorito riceverà un bonus del 20% sulla vincita totale)
 premioAtleta (il premio totale dell'atleta, che differisce in base alla sua performance)
