@@ -1,0 +1,186 @@
+COMMIT 1:
+Ho creato le classi, inizializzate con chat gpt e nelle successive lezioni le modificherò per farle funzionare a dovere:
+
+TORNEO:  
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany._megaprogetto_galifivalerio;
+
+import java.util.ArrayList;
+
+public class Torneo {
+    private String nomeTorneo;
+    private Match[] elencoMatch;
+    private final int numMaxAtleti = 20;
+    private int numeroDiMatch;
+
+    public Torneo(String nomeTorneo, int numeroDiMatch) {
+        this.nomeTorneo = nomeTorneo;
+        this.numeroDiMatch = numeroDiMatch;
+        this.elencoMatch = new Match[numeroDiMatch];
+    }
+
+    public String getNomeTorneo() {
+        return nomeTorneo;
+    }
+
+    public void setNomeTorneo(String nomeTorneo) {
+        this.nomeTorneo = nomeTorneo;
+    }
+
+    public Match[] getElencoMatch() {
+        return elencoMatch;
+    }
+
+    public void setElencoMatch(Match[] elencoMatch) {
+        this.elencoMatch = elencoMatch;
+    }
+
+    public int getNumeroDiMatch() {
+        return numeroDiMatch;
+    }
+
+    public void setNumeroDiMatch(int numeroDiMatch) {
+        this.numeroDiMatch = numeroDiMatch;
+    }
+
+    public void aggiungiMatch(int indice, Match match) {
+        if (indice >= 0 && indice < numeroDiMatch) {
+            elencoMatch[indice] = match;
+        } else {
+            System.out.println("Indice non valido per aggiungere il match.");
+        }
+    }
+       @Override
+    public String toString() {
+        String result = "Torneo{" +
+                "nomeTorneo='" + nomeTorneo + '\'' +
+                ", elencoMatch=[";
+        for (int i = 0; i < elencoMatch.length; i++) {
+            if (i > 0) {
+                result += ", ";
+            }
+            result += elencoMatch[i];
+        }
+        result += "], numMaxAtleti=" + numMaxAtleti +
+                ", numeroDiMatch=" + numeroDiMatch +
+                '}';
+        return result;
+        
+    }
+}
+
+
+
+
+
+
+MATCH:
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany._megaprogetto_galifivalerio;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author Studente
+ */
+
+ public class Match {
+        private int numeroMatch;
+        private boolean controlloEta;
+        private int etaMinima;
+        private int numeroRound;
+        private String classeDiPeso;
+        private ArrayList<String> atletiPresenti;
+        private double premioAtleta;
+        
+
+        public Match(int numeroMatch, boolean controlloEta, int etaMinima, int numeroRound, String classeDiPeso) {
+            this.numeroMatch = numeroMatch;
+            this.controlloEta = controlloEta;
+            this.etaMinima = etaMinima;
+            this.numeroRound = numeroRound;
+            this.classeDiPeso = classeDiPeso;
+            this.atletiPresenti = new ArrayList<>();
+        }
+
+        public int getNumeroMatch() {
+            return numeroMatch;
+        }
+
+        public void setNumeroMatch(int numeroMatch) {
+            this.numeroMatch = numeroMatch;
+        }
+
+        public boolean isControlloEta() {
+            return controlloEta;
+        }
+
+        public void setControlloEta(boolean controlloEta) {
+            this.controlloEta = controlloEta;
+        }
+
+        public int getEtaMinima() {
+            return etaMinima;
+        }
+
+        public void setEtaMinima(int etaMinima) {
+            this.etaMinima = etaMinima;
+        }
+
+        public int getNumeroRound() {
+            return numeroRound;
+        }
+
+        public void setNumeroRound(int numeroRound) {
+            this.numeroRound = numeroRound;
+        }
+
+        public String getClasseDiPeso() {
+            return classeDiPeso;
+        }
+
+        public void setClasseDiPeso(String classeDiPeso) {
+            this.classeDiPeso = classeDiPeso;
+        }
+
+        public ArrayList<String> getAtletiPresenti() {
+            return atletiPresenti;
+        }
+
+        public void setAtletiPresenti(ArrayList<String> atletiPresenti) {
+            this.atletiPresenti = atletiPresenti;
+        }
+
+        public double getPremioAtleta() {
+            return premioAtleta;
+        }
+
+        public void setPremioAtleta(double premioAtleta) {
+            this.premioAtleta = premioAtleta;
+        }
+        
+        @Override
+        public String toString() {
+            return "Match{" +
+                    "numeroMatch=" + numeroMatch +
+                    ", controlloEta=" + controlloEta +
+                    ", etaMinima=" + etaMinima +
+                    ", numeroRound=" + numeroRound +
+                    ", classeDiPeso='" + classeDiPeso + '\'' +
+                    ", premioAtleta=" + premioAtleta +
+                    '}';
+        }
+    }
