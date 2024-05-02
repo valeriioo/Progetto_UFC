@@ -1,3 +1,10 @@
+In questo secondo commit ho sistemato il codice di tutte le classi aiutandomi con esercizi vecchi, ho instanziato la classe RoundException per gestire le eccezioni
+di input dei round e un attributo localdatetime per visualizzare lorario attuale. Nelle prossime lezioni implementerò CVS, serializz. e desere. e sistemero il codice
+magari aggiungendo nuove funzioni.
+Questo è il codice fin ora
+
+    TORNEO
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -78,20 +85,7 @@ public class Torneo implements Serializable{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    MATCH
 
 
 /*
@@ -167,26 +161,7 @@ public class Match {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    APP
 
 
 /*
@@ -297,15 +272,9 @@ public class App {
 
     }
 }
+        
 
-
-
-
-
-
-
-
-
+        ROUNDEXCEPTION
 
 
 
