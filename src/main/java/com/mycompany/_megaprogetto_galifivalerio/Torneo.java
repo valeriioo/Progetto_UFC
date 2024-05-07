@@ -12,7 +12,7 @@ public class Torneo implements Serializable {
     private String nomeTorneo;
     private Match[] elencoMatch;
     private final int numMaxAtleti = 20;
-    private final int NUM_MAX_MATCH = 100; // Nuova costante per la dimensione massima degli array di match
+    private final int NUM_MAX_MATCH = 100; //costante per la dimensione massima degli array di match
     private int numeroDiMatch;
     private LocalDateTime orarioTorneo;
 /**
